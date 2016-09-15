@@ -40,7 +40,8 @@
                     android:textColor="#010101"
                     android:textSize="40dp"
                     android:checked="false"
-                    android:text="Power" />
+                    android:text="Power"
+                    android:onClick="powerButton"/>
 
             </LinearLayout>
 
@@ -58,20 +59,23 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="99.5"
-                        android:id="@+id/StationPreset1" />
+                        android:text="1"
+                        android:id="@+id/StationPreset1"
+                        android:onClick="preset1" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="98.7"
-                        android:id="@+id/StationPreset2" />
+                        android:text="3"
+                        android:id="@+id/StationPreset2"
+                        android:onClick="preset3" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="101.1"
-                        android:id="@+id/StationPreset3" />
+                        android:text="5"
+                        android:id="@+id/StationPreset3"
+                        android:onClick="preset5" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -82,20 +86,23 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="105.1"
-                        android:id="@+id/StationPreset4" />
+                        android:text="2"
+                        android:id="@+id/StationPreset4"
+                        android:onClick="preset2" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="106.7"
-                        android:id="@+id/StationPreset5" />
+                        android:text="4"
+                        android:id="@+id/StationPreset5"
+                        android:onClick="preset4" />
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="KDUP"
-                        android:id="@+id/StationPreset6" />
+                        android:text="6"
+                        android:id="@+id/StationPreset6"
+                        android:onClick="preset6" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -121,7 +128,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="101.1 KUFO"
                     android:id="@+id/stationDisplay"
                     android:layout_gravity="center_vertical"
                     android:background="#000000"
@@ -132,10 +138,19 @@
                     android:layout_width="20px"
                     android:layout_height="20px" />
 
-                <SeekBar
-                    android:layout_width="match_parent"
+                <Button
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/TunerBar" />
+                    android:text="+"
+                    android:id="@+id/tunerUp"
+                    android:onClick="tunerUpButton" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:id="@+id/tunerDown"
+                    android:onClick="tunerDownButton" />
 
                 <Space
                     android:layout_width="0dp"
@@ -163,7 +178,9 @@
                 android:id="@+id/amfmToggleButton"
                 android:textOn="FM"
                 android:textOff="AM"
-                android:layout_weight="0.34" />
+                android:layout_weight="0.34"
+                android:checked="false"
+                android:onClick="amfmToggle" />
 
             <Space
                 android:layout_width="20px"
